@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function pulaLinha() {
+                document.write("<br>")
+                document.write("<br>")
+            }
+
+            function mostra(frase) {
+                document.write(frase);
+                pulaLinha()
+            }
+            let nome = prompt("Informe o seu nome")
+
+            var numeroPensado = Math.round(Math.random() * 10);
+
+            var tentativas = 1;
+
+            while(tentativas <= 3) {
+                var chute = parseInt(prompt("Informe o seu chute!"));
+
+                if(chute == numeroPensado) {
+                    mostra(nome + " você acertou! O número pensado era " + numeroPensado + ".");
+                    break;
+                } else if(chute > numeroPensado){
+                    alert(nome + " você errou! O número pensado é menor!");    
+                } else if(chute < numeroPensado){
+                    alert(nome + " você errou. O número pensado é maior!");
+                }
+                
+                tentativas++;
+            }
+
+        </script>
+    </body>
+</html>
+    

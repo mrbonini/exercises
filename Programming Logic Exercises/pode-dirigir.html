@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function pulaLinha() {
+                document.write("<br>")
+                document.write("<br>")
+            }
+
+            function mostra(frase) {
+                document.write(frase);
+                pulaLinha()
+            }
+
+            let nome = prompt("Qual o seu nome?");
+
+            let idade = parseInt(prompt("Qual a sua idade?"));
+
+            let temCarteira = prompt("Você possui carteira? Responda 'sim' ou 'nao'");
+
+            if(idade >= 18 && temCarteira == "sim") {
+                mostra(nome + " você está autorizado a dirigir!");
+            }else {
+                mostra(nome + " você não está autorizado a dirigir!")
+            };
+            
+
+        </script>
+    </body>
+</html>
+    

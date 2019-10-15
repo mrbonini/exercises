@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        let loginCadastrado = "mrbonini";
+        let senhaCadastrada = "kaique123";
+
+        let maximoTentativas = 3;
+        let tentativaAtual = 1;
+
+        while(tentativaAtual <= maximoTentativas){
+            let loginInformado = prompt("Informe seu login");
+            let senhaInformada = prompt("informe sua senha");
+
+            if(loginInformado == loginCadastrado && senhaInformada == senhaCadastrada) {
+                alert("Bem vindo ao sistema " + loginInformado);
+                tentativaAtual = maximoTentativas;
+            }else {
+                if(tentativaAtual == maximoTentativas) {
+                    alert("Suas chances acabaram!");
+                } else {
+                    alert("Login inválido, tente novamente. Você possui apenas mais " + (maximoTentativas - tentativaAtual) + " tentativas.");
+                }
+            }
+            tentativaAtual = tentativaAtual + 1
+        }
+
+    </script>
+</body>
+
+</html>
